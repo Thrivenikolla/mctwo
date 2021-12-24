@@ -12,11 +12,19 @@ stages:
       matrix:
         JOB1:
           Version: 1.1
+          Appoldname: one
+          Appnewname: onenew
         JOB2:
           Version: 1.1.1
+          Appoldname: two
+          Appnewname: tow
         JOB3:
           Version: 1.1.2
+          Appoldname: three
+          Appnewname: thre
     steps:
     -script:
       echo "$(Version)"
+      echo "$(Appoldname)"
+      echo "$(Appnewname)"     
      displayName: "Echo Variables"
