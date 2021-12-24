@@ -14,17 +14,21 @@ stages:
           Version: 1.1
           Appoldname: one
           Appnewname: onenew
+          update: need
         JOB2:
           Version: 1.1.1
           Appoldname: two
           Appnewname: tow
+          update: need
         JOB3:
           Version: 1.1.2
           Appoldname: three
           Appnewname: thre
+          update: need
     steps:
     -script:
       echo "$(Version)"
       echo "$(Appoldname)"
-      echo "$(Appnewname)"     
+      echo "$(Appnewname)" 
+      echo "$(update)"
      displayName: "Echo Variables"
