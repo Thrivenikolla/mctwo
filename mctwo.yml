@@ -1,0 +1,22 @@
+trigger : none
+
+pool:
+  vmImage: 'ubuntu-16.04'
+
+stages:
+-stage: firststage
+ jobs:
+   -job: firstjob
+    strategy:
+      maxParallel: 0
+      matrix:
+        JOB1:
+          Version: 1.1
+        JOB2:
+          Version: 1.1.1
+        JOB3:
+          Version: 1.1.2
+    steps:
+    -script:
+      echo "$(Version)"
+     displayName: "Echo Variables"
